@@ -64,8 +64,10 @@ def load_prices(path):
 
     # TODO 4: reorder columns to  ['date', 'ticker', 'close']  and return
     #         >>> return df[['date', 'ticker', 'close']]
-
-    raise NotImplementedError("load_prices — see the TODOs above")
+    path = Path(path)
+    df = pd.read_csv(path, parse_dates=['date'])
+    df['ticker'] = path.stem.lower()
+    return df[['date', 'ticker', 'close']]
 
 
 def clean_prices(df):
