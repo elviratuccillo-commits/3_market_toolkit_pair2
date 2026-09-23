@@ -106,7 +106,10 @@ def clean_prices(df):
     #               .drop_duplicates()
     #               .reset_index(drop=True))
 
-    raise NotImplementedError("clean_prices — see the TODOs above")
+    return (df.dropna(subset=['close'])
+          .sort_values('date')
+          .drop_duplicates()
+          .reset_index(drop=True))
 
 
 def load_all_prices(folder):
