@@ -44,7 +44,7 @@ pytest tests/ -v
 
 - `data/raw/` —
 - `src/` —
-- `scripts/` —
+- `scripts/` — It contains the `fetch_prices.sh` script, which validates and summarizes the raw price data.
 - `tests/` —
 
 ## Development workflow
