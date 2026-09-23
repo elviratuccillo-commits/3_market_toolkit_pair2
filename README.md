@@ -48,7 +48,7 @@ To calculate financial metrics and generate the performance chart, run the demo:
 <!-- TODO (both): describe what each folder is for. Keep it short — 1 line each. -->
 
 - `data/raw/` — Contains the original finacial CSV datasets.
-- `src/` — Contains the core Python toolkit modules and execution pipeline. 
+- `src/` — Contains the core Python toolkit modules and execution pipeline
 - `scripts/` — It contains the `fetch_prices.sh` script, which validates and summarizes the raw price data.
 - `tests/` — It contains tests for the ingestion and metrics modules.
 
