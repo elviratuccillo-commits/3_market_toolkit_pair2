@@ -151,5 +151,19 @@ def load_all_prices(folder):
     # TODO 5: combine with  pd.concat(dfs, ignore_index=True)
 
     # TODO 6: pass the combined DataFrame through  clean_prices  and return the result
+    if not folder.is_dir():
+        raise FileNotFoundError(f"{folder} does not exist")
 
-    raise NotImplementedError("load_all_prices — see the TODOs above")
+    csv_files = list(folder.glob('*.csv'))
+
+    if not csv_files:
+        raise FileNotFoundError(f"No CSV files found in {folder}")
+
+    dfs = []
+    for f in csv_files:
+        dfs.append(load_prices(f))
+
+    combined = pd.concat(dfs, ignore_index=True)
+
+    return clean_prices(combined)
+    
