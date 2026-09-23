@@ -6,30 +6,51 @@ Component B of MSA-DATI07-01 · Python Environments and Engineering Workflows.
 
 ## Team
 
-<!-- TODO (both partners): add your names below, one line each. -->
-<!-- This is one of the shared files — you WILL hit a merge conflict here. That is expected. -->
 
-- Partner A: _your name here_
-- Partner B: _your name here_
+
+- Partner A: Elvira Tuccillo
+- Partner B: Claudia Jimenez
 
 ## Setup
+1. Clone the repository
+```bash
+git clone https://github.com/elviratuccillo-commits/3_market_toolkit_pair2.git
+```
 
-<!-- TODO (Partner A): write the exact commands a new teammate would run to get -->
-<!-- from a fresh clone to a working environment. Assume they have Python 3.11+. -->
-
+2. Create the virtual environment 
+```bash
+python3 -m venv .venv
+```
+3. Activate the virtual environment 
+```bash
+source .venv/bin/activate
+```
+4. Install the dependencies 
+```bash
+pip install -r requirements.txt
+```
+5. Verify the installation:
+```bash
+pytest tests/ -v
+```
 ## How to run
 
-<!-- TODO (Partner B): describe how to run  scripts/fetch_prices.sh  and  src/demo.py . -->
-<!-- Include what output files each command produces. -->
+To validate and log the raw data, run the fetch script:
+`bash scripts/fetch_prices.sh`
+*Produces:* A console summary of rows per ticker and a dated log file in the `logs/` directory.
+
+To calculate financial metrics and generate the performance chart, run the demo:
+`python -m src.demo`
+*Produces:* A printed risk-adjusted performance summary for each ticker and saves a cumulative wealth chart to `outputs/cumulative_returns.png`.
 
 ## Structure
 
 <!-- TODO (both): describe what each folder is for. Keep it short — 1 line each. -->
 
-- `data/raw/` —
-- `src/` —
-- `scripts/` —
-- `tests/` —
+- `data/raw/` — Contains the original finacial CSV datasets.
+- `src/` — Contains the core Python toolkit modules and execution pipeline
+- `scripts/` — It contains the `fetch_prices.sh` script, which validates and summarizes the raw price data.
+- `tests/` — It contains tests for the ingestion and metrics modules.
 
 ## Development workflow
 
