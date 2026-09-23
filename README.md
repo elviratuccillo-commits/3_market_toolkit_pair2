@@ -32,7 +32,7 @@ To calculate financial metrics and generate the performance chart, run the demo:
 <!-- TODO (both): describe what each folder is for. Keep it short — 1 line each. -->
 
 - `data/raw/` — Contains the original finacial CSV datasets.
-- `src/` — Contains the core Python toolkit modules and 
+- `src/` — Contains the core Python toolkit modules 
 - `scripts/` —
 - `tests/` —
 
