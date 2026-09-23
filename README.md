@@ -10,7 +10,7 @@ Component B of MSA-DATI07-01 · Python Environments and Engineering Workflows.
 <!-- This is one of the shared files — you WILL hit a merge conflict here. That is expected. -->
 
 - Partner A: _your name here_
-- Partner B: _your name here_
+- Partner B: Claudia Jimenez
 
 ## Setup
 
@@ -19,15 +19,20 @@ Component B of MSA-DATI07-01 · Python Environments and Engineering Workflows.
 
 ## How to run
 
-<!-- TODO (Partner B): describe how to run  scripts/fetch_prices.sh  and  src/demo.py . -->
-<!-- Include what output files each command produces. -->
+To validate and log the raw data, run the fetch script:
+`bash scripts/fetch_prices.sh`
+*Produces:* A console summary of rows per ticker and a dated log file in the `logs/` directory.
+
+To calculate financial metrics and generate the performance chart, run the demo:
+`python -m src.demo`
+*Produces:* A printed risk-adjusted performance summary for each ticker and saves a cumulative wealth chart to `outputs/cumulative_returns.png`.
 
 ## Structure
 
 <!-- TODO (both): describe what each folder is for. Keep it short — 1 line each. -->
 
-- `data/raw/` —
-- `src/` —
+- `data/raw/` — Contains the original finacial CSV datasets.
+- `src/` — Contains the core Python toolkit modules and 
 - `scripts/` —
 - `tests/` —
 
